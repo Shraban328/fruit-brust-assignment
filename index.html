@@ -11,7 +11,27 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
+    <!-- Tailwind and daisyUI link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind customization -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              "tomato-color-bg": "#F85559",
+            },
+          },
+        },
+      };
     </script>
+    <!-- style section -->
     <style>
       .font-lato {
         font-family: "Lato", sans-serif;
@@ -19,6 +39,81 @@
     </style>
   </head>
   <body class="font-lato">
-    hi
+    <header class="max-w-screen-2xl mx-auto">
+      <!-- nav bar -->
+      <nav class="">
+        <div
+          class="navbar bg-base-100 bg-tomato-color-bg py-9 px-14 rounded-s-full rounded-e-full"
+        >
+          <div class="navbar-start">
+            <!-- navbar -->
+            <!-- for large devices -->
+            <div class="hidden lg:inline">
+              <div class="list-none flex gap-7">
+                <li><a>Home</a></li>
+                <li><a>About Us</a></li>
+                <li><a>Shop</a></li>
+                <li><a>All Fruits</a></li>
+              </div>
+            </div>
+            <!-- for small devices -->
+            <div class="lg:hidden">
+              <div class="dropdown">
+                <label tabindex="0" class="btn btn-ghost btn-circle">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h16M4 18h7"
+                    />
+                  </svg>
+                </label>
+                <ul
+                  tabindex="0"
+                  class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                >
+                  <li><a>Homepage</a></li>
+                  <li><a>Portfolio</a></li>
+                  <li><a>About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="navbar-center">
+            <a class="btn btn-ghost normal-case text-xl">
+              <img src="./images/logo.png" alt="" />
+              <p>Fruit Burst</p>
+            </a>
+          </div>
+          <div class="navbar-end">
+            <button class="btn btn-ghost btn-circle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main></main>
+    <footer></footer>
   </body>
 </html>
